@@ -1,0 +1,17 @@
+[APP]
+
+[DIRECTORIES]
+..\..\win2k\IMDisplay
+
+[INCLUDES]
+..\..
+..\..\Magick++\lib
+
+[DEPENDENCIES]
+coders
+filters
+Magick++
+magick
+
+[WARNING_LEVEL]
+4

@@ -1,0 +1,16 @@
+[DLL]
+
+[DIRECTORIES]
+..\..\Magick++\lib
+..\..\Magick++\lib\Magick++
+
+[INCLUDES]
+..\..
+..\..\magick
+
+[DEPENDENCIES]
+magick
+wand
+
+[WARNING_LEVEL]
+4

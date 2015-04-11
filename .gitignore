@@ -8,3 +8,17 @@ VisualMagick/bin/*
 VisualMagick/bin/*.*
 
 VisualMagick/bin/dcraw.exe
+
+*.o
+
+*.lo
+
+*.Plo
+
+**/.deps/*
+
+**/.libs/*
+
+**/lib/*
+
+*.la

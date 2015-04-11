@@ -1,0 +1,10 @@
+
+VisualMagick/Debug/*
+
+VisualMagick/lib/*
+
+VisualMagick/bin/*
+
+VisualMagick/bin/*.*
+
+VisualMagick/bin/dcraw.exe

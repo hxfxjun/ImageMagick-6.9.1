@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>UTIL_montage</ProjectName>
+    <ProjectGuid>{C3347A6E-49F5-4DD2-8E55-4C99C23B36FC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+    <TargetName>montage</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Debug\DynamicMT-Win32\UTIL_montage\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Release\DynamicMT-Win32\UTIL_montage\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>;..\..\utilities;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;WIN32;_VISUALC_;NeedFunctionPrototypes;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/MACHINE:X86;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\bin\montage.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\lib\UTIL_DB_montage_.lib</ImportLibrary>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>;..\..\utilities;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;WIN32;_VISUALC_;NeedFunctionPrototypes;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/MACHINE:X86;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\bin\montage.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\lib\UTIL_RL_montage_.lib</ImportLibrary>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utilities\montage.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\utilities\Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\coders\IM_MOD_aai_DynamicMT.vcxproj">
+      <Project>{4645114B-868A-4359-A1DA-990A2C8BE4C8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_art_DynamicMT.vcxproj">
+      <Project>{F605B395-4C1F-4E2F-8D16-A5978D349CEB}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_avs_DynamicMT.vcxproj">
+      <Project>{C3010B1E-93D7-465C-8E5F-D65261F15B72}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_bgr_DynamicMT.vcxproj">
+      <Project>{F4A4F80F-3998-4AFA-B3BE-2B4F1A660AC9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_bmp_DynamicMT.vcxproj">
+      <Project>{0568B3F2-268D-4D96-A2B2-DB65754CBD16}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_braille_DynamicMT.vcxproj">
+      <Project>{D4C6B4C4-1FA4-4CD2-AE1D-0094B7F295BA}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_cals_DynamicMT.vcxproj">
+      <Project>{33406187-4BA8-49B0-B0FB-32A26DAFE128}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_caption_DynamicMT.vcxproj">
+      <Project>{AB4EDFA7-5932-4B12-B842-D18C44D2EA57}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_cin_DynamicMT.vcxproj">
+      <Project>{3378A04B-3721-4529-8024-A857A94976A8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_cip_DynamicMT.vcxproj">
+      <Project>{D1F0A737-DB8E-4F76-947C-E2EEE2409C62}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_clip_DynamicMT.vcxproj">
+      <Project>{891EF504-8474-4014-B376-1158E56A8AAB}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_clipboard_DynamicMT.vcxproj">
+      <Project>{C59DA1B5-6931-4BAB-9536-3C52323D49C3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_cmyk_DynamicMT.vcxproj">
+      <Project>{02FB34AA-9EA4-41BD-A001-305A6FD729EF}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_cut_DynamicMT.vcxproj">
+      <Project>{7915CBCE-D8C0-4A71-AC26-B102873F3648}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dcm_DynamicMT.vcxproj">
+      <Project>{CE6B2189-FDAE-4F9E-8914-2E2C9B905D2A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dds_DynamicMT.vcxproj">
+      <Project>{CB3FE921-8425-450C-A0DA-C7EEC57245ED}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_debug_DynamicMT.vcxproj">
+      <Project>{192672BD-0340-404B-83F6-45B597795173}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dib_DynamicMT.vcxproj">
+      <Project>{659A644B-BBE6-4CFC-9ABB-2636A5F6AD4D}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_djvu_DynamicMT.vcxproj">
+      <Project>{C1908986-B13B-4ADA-B90F-3450BE48C367}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dng_DynamicMT.vcxproj">
+      <Project>{D2310BD8-8797-4FB0-AC43-EE73305F9394}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dot_DynamicMT.vcxproj">
+      <Project>{DAAF5AFF-0287-4400-9101-3B7FC9A9C67E}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dps_DynamicMT.vcxproj">
+      <Project>{8E745926-F832-42A9-BF24-15686BE7257C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_dpx_DynamicMT.vcxproj">
+      <Project>{ED8F399D-CEA9-4428-82B6-2D47247BB094}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_emf_DynamicMT.vcxproj">
+      <Project>{97C641D6-55FA-43FE-A242-751E49E81014}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ept_DynamicMT.vcxproj">
+      <Project>{B27BEE14-4F92-4996-BDEA-AA468F2043C8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_exr_DynamicMT.vcxproj">
+      <Project>{DF13AB9B-EAE2-4C8A-B749-086FFBAA1BB2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_fax_DynamicMT.vcxproj">
+      <Project>{48472DD8-E8FB-43A7-B965-105EA0C83EC3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_fd_DynamicMT.vcxproj">
+      <Project>{DF99AACD-5FEA-4C5E-86E0-0FD6C593A73A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_fits_DynamicMT.vcxproj">
+      <Project>{52A753D9-36BE-42AA-BAD8-D75777A1F15D}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_fpx_DynamicMT.vcxproj">
+      <Project>{7BECC193-FAB7-45FC-AA33-3236734551C1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_gif_DynamicMT.vcxproj">
+      <Project>{A37796A4-BF1E-4A5E-B312-A7330BEBE4D2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_gradient_DynamicMT.vcxproj">
+      <Project>{A78E2D01-8173-4EE3-B9DE-911B9836FE84}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_gray_DynamicMT.vcxproj">
+      <Project>{2D744DF6-1DFC-45CB-89EF-D4DC06E54B4C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_hald_DynamicMT.vcxproj">
+      <Project>{D79CE1B0-6B30-456D-8DBD-BE3B26D8882C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_hdr_DynamicMT.vcxproj">
+      <Project>{9CA7A39B-44A5-4D01-B052-04C62095BC35}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_histogram_DynamicMT.vcxproj">
+      <Project>{951A519A-4BD6-4485-B691-CF2BC56C0769}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_hrz_DynamicMT.vcxproj">
+      <Project>{1C3C6311-47AC-4B88-B1A9-6BCB0B87A249}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_html_DynamicMT.vcxproj">
+      <Project>{62E287C1-FDD9-4018-937F-2B8BB56D6103}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_icon_DynamicMT.vcxproj">
+      <Project>{922F36D0-A86B-41F5-8BDD-34067B6BB1C5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_info_DynamicMT.vcxproj">
+      <Project>{AD2ED97E-602E-431D-BB0D-1435946B402A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_inline_DynamicMT.vcxproj">
+      <Project>{AB0CA64D-2D69-4F2D-863C-B096BDBD36C6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ipl_DynamicMT.vcxproj">
+      <Project>{CD8B0BC8-AF52-42E9-8BE1-2EE72A4668E9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_jbig_DynamicMT.vcxproj">
+      <Project>{8E77C8E1-F039-4BCA-956E-27D2EF6F9397}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_jnx_DynamicMT.vcxproj">
+      <Project>{180F52B7-C52E-4E3C-B9AD-B4BC710EE384}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_jp2_DynamicMT.vcxproj">
+      <Project>{1165E5B8-EFF4-4C88-8593-CD2961ECD3A9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_jpeg_DynamicMT.vcxproj">
+      <Project>{5366E2B4-C674-4D81-9C4E-E049D24C5D4A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_json_DynamicMT.vcxproj">
+      <Project>{A91EF439-5BE9-4992-85F9-14C363E2A8B4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_label_DynamicMT.vcxproj">
+      <Project>{3FEB6B2B-5276-4D87-8E66-2ACD843BB2A1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mac_DynamicMT.vcxproj">
+      <Project>{7E88BCDE-6398-414B-83FC-58619B726CD8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_magick_DynamicMT.vcxproj">
+      <Project>{0A6AF86F-0B15-4464-A223-05FFF95A54D9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_map_DynamicMT.vcxproj">
+      <Project>{04A06D54-4FD8-456F-8266-5A79ECD6A3C4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mask_DynamicMT.vcxproj">
+      <Project>{8401157D-2B9A-431C-A44D-0848BA9A389C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mat_DynamicMT.vcxproj">
+      <Project>{04E38A44-152E-4763-8477-DEF7ED6B9229}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_matte_DynamicMT.vcxproj">
+      <Project>{FF8ABA9E-70DB-46F6-9E48-DA7750B64DC1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_meta_DynamicMT.vcxproj">
+      <Project>{7214B3D1-CFAD-4ABF-85DB-478B290085B1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_miff_DynamicMT.vcxproj">
+      <Project>{41BB7D52-E9A5-4603-AE63-BB103759B39E}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mono_DynamicMT.vcxproj">
+      <Project>{62D9B661-91AF-4E6B-A367-33E61FC4EF5F}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mpc_DynamicMT.vcxproj">
+      <Project>{5910A8A8-53AE-44E5-B4BA-DA2F82D727E9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mpeg_DynamicMT.vcxproj">
+      <Project>{14B80292-379A-41B0-96AC-CFBBA33524A1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mpr_DynamicMT.vcxproj">
+      <Project>{4234A1CD-BA22-4CC0-97BE-9186063F078C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_msl_DynamicMT.vcxproj">
+      <Project>{697ADE32-04AD-4AE3-A0E9-79B720A0ECCA}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mtv_DynamicMT.vcxproj">
+      <Project>{B1D692C7-A278-44AB-81EE-BAC3DB814A69}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_mvg_DynamicMT.vcxproj">
+      <Project>{050CDB9C-4A75-4363-AB21-5F59ED039EFE}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_null_DynamicMT.vcxproj">
+      <Project>{5527F3E4-2335-4B24-86FF-3C891835E958}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_otb_DynamicMT.vcxproj">
+      <Project>{9AFD4AA6-7C6C-4349-A1C7-BF9B1F14FB32}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_palm_DynamicMT.vcxproj">
+      <Project>{16FE7954-0E59-4034-B472-96CC31EBB05A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pango_DynamicMT.vcxproj">
+      <Project>{C1D0EC12-DDAB-4612-8C7F-D1BE64D9839E}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pattern_DynamicMT.vcxproj">
+      <Project>{312E5864-D85F-4EBF-B0C0-1B07161BD278}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pcd_DynamicMT.vcxproj">
+      <Project>{3E212C48-BE88-413C-A27D-ABCBF9C95C5B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pcl_DynamicMT.vcxproj">
+      <Project>{3ACD1CE1-994F-446E-BEC1-41FFA92C1A05}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pcx_DynamicMT.vcxproj">
+      <Project>{CFED0A51-3DC1-45B9-BC51-904EC1F1AAA6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pdb_DynamicMT.vcxproj">
+      <Project>{401226BE-1A87-4E09-B91A-7BADBFC8C3D1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pdf_DynamicMT.vcxproj">
+      <Project>{1C00CD82-185A-4436-B108-B493EDE905A9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pes_DynamicMT.vcxproj">
+      <Project>{FB103DAC-1602-4E29-820E-3BF02D07BA64}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pict_DynamicMT.vcxproj">
+      <Project>{20247F04-8EC5-4DEF-A8AD-2C935CEFD3F1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pix_DynamicMT.vcxproj">
+      <Project>{AB6E3715-6E40-4F58-8B76-CF01D010BFE1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_plasma_DynamicMT.vcxproj">
+      <Project>{94DC35D4-5289-4824-B21D-5BB54A557454}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_png_DynamicMT.vcxproj">
+      <Project>{774403A0-BEB4-4BA5-A19C-F717B60ADECF}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pnm_DynamicMT.vcxproj">
+      <Project>{FB2A8C6B-4E08-447F-B0FD-5200507E42F1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_preview_DynamicMT.vcxproj">
+      <Project>{CE78EF87-D211-4E97-8F6E-8A9B5C76FAEB}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ps_DynamicMT.vcxproj">
+      <Project>{E2CC6DF7-A27A-4616-85E9-EF2EA87A8588}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ps2_DynamicMT.vcxproj">
+      <Project>{B2F2C882-3ED8-4EDC-8ABE-98056BC26E31}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ps3_DynamicMT.vcxproj">
+      <Project>{7807C3C0-94F6-4F69-B302-C5D1ED3FF221}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_psd_DynamicMT.vcxproj">
+      <Project>{F312EC76-866F-417E-AD2C-3CC4F5042285}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_pwp_DynamicMT.vcxproj">
+      <Project>{50D792DA-AFF6-4F93-824F-CA6D58AA6916}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_raw_DynamicMT.vcxproj">
+      <Project>{8288FAD4-64E0-4561-87C0-9AFB9A51F95B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_rgb_DynamicMT.vcxproj">
+      <Project>{0DA47BB6-913D-4D90-9D34-4CC235C3BDAA}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_rgf_DynamicMT.vcxproj">
+      <Project>{51217AF4-83E0-4B9D-9E62-E12EF24F0DB7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_rla_DynamicMT.vcxproj">
+      <Project>{80674992-84F7-4A46-BD3D-8F4E34138A1B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_rle_DynamicMT.vcxproj">
+      <Project>{E734D4C0-2CFB-4A28-9D0D-BE17C5F8C526}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_scr_DynamicMT.vcxproj">
+      <Project>{001A2D8C-77A6-452C-814C-C24B18F72F80}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_screenshot_DynamicMT.vcxproj">
+      <Project>{FB6E1D1D-01D9-46D7-8D26-B4C770155EB8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_sct_DynamicMT.vcxproj">
+      <Project>{8E3AB707-8C0C-4FAF-9EDC-4C9D0B65C2D6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_sfw_DynamicMT.vcxproj">
+      <Project>{D19B1AFB-147C-47FF-BCFB-D8E11738D1F4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_sgi_DynamicMT.vcxproj">
+      <Project>{EF2E8652-54BD-481D-AD6B-835E597DF9F7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_sixel_DynamicMT.vcxproj">
+      <Project>{CC7994F8-1B2F-4CC3-A2A6-E8D870394200}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_stegano_DynamicMT.vcxproj">
+      <Project>{9C8B5925-7BBB-43A6-B4C7-FEF1B315529F}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_sun_DynamicMT.vcxproj">
+      <Project>{2A2AC9EF-DA1F-4F91-915D-6886FF40DF28}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_svg_DynamicMT.vcxproj">
+      <Project>{C19EC3D4-0D63-4180-83F3-DB736A23E512}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_tga_DynamicMT.vcxproj">
+      <Project>{43606734-1150-4A4D-8252-F1AC8A8D730B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_thumbnail_DynamicMT.vcxproj">
+      <Project>{B2958543-F727-469F-B618-8874489EBDBF}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_tiff_DynamicMT.vcxproj">
+      <Project>{F9BE6D91-2D4F-4897-8948-04CBC5A8923A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_tile_DynamicMT.vcxproj">
+      <Project>{5A8CD32D-E97B-449C-AABC-83D147AF7166}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_tim_DynamicMT.vcxproj">
+      <Project>{5E9E4683-9E90-4590-A108-BA8C6BEFC650}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ttf_DynamicMT.vcxproj">
+      <Project>{BD5F0921-7405-428A-B07A-BD6CCD2A8C1C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_txt_DynamicMT.vcxproj">
+      <Project>{BB17565E-2702-4C95-9ED6-10937FEAC382}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_uil_DynamicMT.vcxproj">
+      <Project>{D800034B-7425-4528-A480-F78EC7FD9B39}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_url_DynamicMT.vcxproj">
+      <Project>{C96EF78C-8445-4664-9D16-1BC04A8909E8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_uyvy_DynamicMT.vcxproj">
+      <Project>{70E960D6-5FB3-41B4-B232-4DD6F77E7051}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_vicar_DynamicMT.vcxproj">
+      <Project>{AFFB3E88-B3D6-44D4-8558-F14E7DB73D41}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_vid_DynamicMT.vcxproj">
+      <Project>{2968F08B-055B-4937-9CDF-AA7C0A2384CC}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_viff_DynamicMT.vcxproj">
+      <Project>{B0D3C97F-DB53-448A-93A6-05FBDB444326}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_vips_DynamicMT.vcxproj">
+      <Project>{C9647AC4-AC86-4AA6-B884-7F628C603F52}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_wbmp_DynamicMT.vcxproj">
+      <Project>{E9DB27C5-52B5-4E23-ADC2-C9BB5D028280}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_webp_DynamicMT.vcxproj">
+      <Project>{30C20565-4329-4DCE-AD0E-CFBC823F55E8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_wmf_DynamicMT.vcxproj">
+      <Project>{FDD4245E-8AE2-42D2-A917-E2D11A7090B8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_wpg_DynamicMT.vcxproj">
+      <Project>{47B4947F-6B9E-44B2-BE8B-557F05B61FC9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_xbm_DynamicMT.vcxproj">
+      <Project>{FF376A42-9740-40BF-8C4F-539AA139BAA1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_xc_DynamicMT.vcxproj">
+      <Project>{DEFE6507-2575-4105-A3F2-9E4740259055}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_xcf_DynamicMT.vcxproj">
+      <Project>{2E5BEE02-29F7-4A4E-9159-8BD85D4F6299}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_xpm_DynamicMT.vcxproj">
+      <Project>{F140EA8F-58E3-42A8-B665-716BBCE647D9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_xps_DynamicMT.vcxproj">
+      <Project>{205A1770-7C84-4324-BBFB-EF303072E566}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_xtrn_DynamicMT.vcxproj">
+      <Project>{3B335463-8916-493F-8025-09DCA7BB550B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_ycbcr_DynamicMT.vcxproj">
+      <Project>{975C9B38-5F79-409A-8EEA-1CC2A831A65A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\coders\IM_MOD_yuv_DynamicMT.vcxproj">
+      <Project>{64A9BDB6-B702-4FD1-834E-1ECD4EA107F8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\filters\FILTER_analyze_DynamicMT.vcxproj">
+      <Project>{C0A44A7A-5A84-4A6C-BF6D-7355F49CA7DD}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\magick\CORE_magick_DynamicMT.vcxproj">
+      <Project>{2BC447CE-A573-4686-A5C6-CFD6949271C0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\wand\CORE_wand_DynamicMT.vcxproj">
+      <Project>{8ED5880B-8827-499D-A7D1-7E80C21B3B75}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

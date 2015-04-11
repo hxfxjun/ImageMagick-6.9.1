@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>CORE_jp2</ProjectName>
+    <ProjectGuid>{3BB75D50-C1E2-4583-AA74-FF4F7182EBD1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CORE_DB_jp2_</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CORE_RL_jp2_</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Debug\DynamicMT-Win32\CORE_jp2\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Release\DynamicMT-Win32\CORE_jp2\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>;..\..\jp2\src\libjasper;..\..\jp2\src\libjasper\base;..\..\jp2\src\libjasper\include;..\..\jp2\src\libjasper\include\jasper;..\..\jp2\src\libjasper\jp2;..\..\jp2\src\libjasper\jpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;WIN32;_VISUALC_;NeedFunctionPrototypes;JAS_WIN_MSVC_BUILD;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;_DLL;_MAGICKMOD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/MACHINE:X86;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\bin\CORE_DB_jp2_.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\lib\CORE_DB_jp2_.lib</ImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>..\..\jp2\jasper.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>;..\..\jp2\src\libjasper;..\..\jp2\src\libjasper\base;..\..\jp2\src\libjasper\include;..\..\jp2\src\libjasper\include\jasper;..\..\jp2\src\libjasper\jp2;..\..\jp2\src\libjasper\jpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;WIN32;_VISUALC_;NeedFunctionPrototypes;JAS_WIN_MSVC_BUILD;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;_DLL;_MAGICKMOD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/MACHINE:X86;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\bin\CORE_RL_jp2_.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\lib\CORE_RL_jp2_.lib</ImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>..\..\jp2\jasper.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_cm.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_debug.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_getopt.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_icc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_iccdata.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_image.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_init.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_malloc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_seq.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_stream.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_string.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_tmr.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_tvp.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\base\jas_version.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jp2\jp2_cod.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jp2\jp2_dec.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jp2\jp2_enc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_bs.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_cs.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_dec.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_enc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_math.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_mct.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_mqcod.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_mqdec.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_mqenc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_qmfb.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_t1cod.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_t1dec.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_t1enc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_t2cod.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_t2dec.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_t2enc.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_tagtree.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_tsfb.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\jp2\src\libjasper\jpc\jpc_util.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_cm.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_config.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_config2.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_debug.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_fix.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_getopt.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_icc.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_image.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_init.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_malloc.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_math.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_seq.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_stream.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_string.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_tmr.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_tvp.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_types.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jas_version.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\include\jasper\jasper.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jp2\jp2_cod.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jp2\jp2_dec.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_bs.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_cod.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_cs.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_dec.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_enc.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_fix.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_flt.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_math.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_mct.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_mqcod.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_mqdec.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_mqenc.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_qmfb.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_t1cod.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_t1dec.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_t1enc.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_t2cod.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_t2dec.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_t2enc.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_tagtree.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_tsfb.h" />
+    <ClInclude Include="..\..\jp2\src\libjasper\jpc\jpc_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\jp2\Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

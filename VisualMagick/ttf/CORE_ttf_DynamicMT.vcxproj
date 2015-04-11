@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>CORE_ttf</ProjectName>
+    <ProjectGuid>{49C2137C-7CA5-400B-8D03-D24E63274903}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CORE_DB_ttf_</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CORE_RL_ttf_</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Debug\DynamicMT-Win32\CORE_ttf\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Release\DynamicMT-Win32\CORE_ttf\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>;..\..\ttf\include;..\..\ttf\src\autofit;..\..\ttf\src\base;..\..\ttf\src\bdf;..\..\ttf\src\cache;..\..\ttf\src\cff;..\..\ttf\src\cid;..\..\ttf\src\gzip;..\..\ttf\src\lzw;..\..\ttf\src\pcf;..\..\ttf\src\pfr;..\..\ttf\src\psaux;..\..\ttf\src\pshinter;..\..\ttf\src\psnames;..\..\ttf\src\raster;..\..\ttf\src\sfnt;..\..\ttf\src\smooth;..\..\ttf\src\truetype;..\..\ttf\src\type1;..\..\ttf\src\type42;..\..\ttf\src\winfonts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;WIN32;_VISUALC_;NeedFunctionPrototypes;_TTFLIB_;FT2_BUILD_LIBRARY;_MBCS;_DLL;_MAGICKMOD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/MACHINE:X86;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\bin\CORE_DB_ttf_.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\lib\CORE_DB_ttf_.lib</ImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>;..\..\ttf\include;..\..\ttf\src\autofit;..\..\ttf\src\base;..\..\ttf\src\bdf;..\..\ttf\src\cache;..\..\ttf\src\cff;..\..\ttf\src\cid;..\..\ttf\src\gzip;..\..\ttf\src\lzw;..\..\ttf\src\pcf;..\..\ttf\src\pfr;..\..\ttf\src\psaux;..\..\ttf\src\pshinter;..\..\ttf\src\psnames;..\..\ttf\src\raster;..\..\ttf\src\sfnt;..\..\ttf\src\smooth;..\..\ttf\src\truetype;..\..\ttf\src\type1;..\..\ttf\src\type42;..\..\ttf\src\winfonts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;WIN32;_VISUALC_;NeedFunctionPrototypes;_TTFLIB_;FT2_BUILD_LIBRARY;_MBCS;_DLL;_MAGICKMOD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/MACHINE:X86;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\bin\CORE_RL_ttf_.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\lib\CORE_RL_ttf_.lib</ImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ttf\src\autofit\autofit.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftbase.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftbbox.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftbitmap.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftdebug.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftfstype.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftgasp.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftglyph.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftgxval.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftinit.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftlcdfil.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftmm.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftotval.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftpatent.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftpfr.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftstroke.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftsynth.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftsystem.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\fttype1.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftwinfnt.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\base\ftxf86.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\bdf\bdf.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cache\ftcache.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cff\cff.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cid\cidgload.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cid\cidload.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cid\cidobjs.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cid\cidparse.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\cid\cidriver.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\gzip\ftgzip.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\lzw\ftlzw.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\pcf\pcf.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\pfr\pfr.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\psaux\psaux.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\pshinter\pshinter.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\psnames\psmodule.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\raster\raster.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\sfnt\sfnt.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\smooth\smooth.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\truetype\truetype.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\type1\type1.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\type42\type42.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="..\..\ttf\src\winfonts\winfnt.c">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ttf\include\freetype.h" />
+    <ClInclude Include="..\..\ttf\include\ft2build.h" />
+    <ClInclude Include="..\..\ttf\include\ftadvanc.h" />
+    <ClInclude Include="..\..\ttf\include\ftautoh.h" />
+    <ClInclude Include="..\..\ttf\include\ftbbox.h" />
+    <ClInclude Include="..\..\ttf\include\ftbdf.h" />
+    <ClInclude Include="..\..\ttf\include\ftbitmap.h" />
+    <ClInclude Include="..\..\ttf\include\ftbzip2.h" />
+    <ClInclude Include="..\..\ttf\include\ftcache.h" />
+    <ClInclude Include="..\..\ttf\include\ftcffdrv.h" />
+    <ClInclude Include="..\..\ttf\include\ftchapters.h" />
+    <ClInclude Include="..\..\ttf\include\ftcid.h" />
+    <ClInclude Include="..\..\ttf\include\fterrdef.h" />
+    <ClInclude Include="..\..\ttf\include\fterrors.h" />
+    <ClInclude Include="..\..\ttf\include\ftgasp.h" />
+    <ClInclude Include="..\..\ttf\include\ftglyph.h" />
+    <ClInclude Include="..\..\ttf\include\ftgxval.h" />
+    <ClInclude Include="..\..\ttf\include\ftgzip.h" />
+    <ClInclude Include="..\..\ttf\include\ftimage.h" />
+    <ClInclude Include="..\..\ttf\include\ftincrem.h" />
+    <ClInclude Include="..\..\ttf\include\ftlcdfil.h" />
+    <ClInclude Include="..\..\ttf\include\ftlist.h" />
+    <ClInclude Include="..\..\ttf\include\ftlzw.h" />
+    <ClInclude Include="..\..\ttf\include\ftmac.h" />
+    <ClInclude Include="..\..\ttf\include\ftmm.h" />
+    <ClInclude Include="..\..\ttf\include\ftmodapi.h" />
+    <ClInclude Include="..\..\ttf\include\ftmoderr.h" />
+    <ClInclude Include="..\..\ttf\include\ftotval.h" />
+    <ClInclude Include="..\..\ttf\include\ftoutln.h" />
+    <ClInclude Include="..\..\ttf\include\ftpfr.h" />
+    <ClInclude Include="..\..\ttf\include\ftrender.h" />
+    <ClInclude Include="..\..\ttf\include\ftsizes.h" />
+    <ClInclude Include="..\..\ttf\include\ftsnames.h" />
+    <ClInclude Include="..\..\ttf\include\ftstroke.h" />
+    <ClInclude Include="..\..\ttf\include\ftsynth.h" />
+    <ClInclude Include="..\..\ttf\include\ftsystem.h" />
+    <ClInclude Include="..\..\ttf\include\fttrigon.h" />
+    <ClInclude Include="..\..\ttf\include\ftttdrv.h" />
+    <ClInclude Include="..\..\ttf\include\fttypes.h" />
+    <ClInclude Include="..\..\ttf\include\ftwinfnt.h" />
+    <ClInclude Include="..\..\ttf\include\ftxf86.h" />
+    <ClInclude Include="..\..\ttf\include\t1tables.h" />
+    <ClInclude Include="..\..\ttf\include\ttnameid.h" />
+    <ClInclude Include="..\..\ttf\include\tttables.h" />
+    <ClInclude Include="..\..\ttf\include\tttags.h" />
+    <ClInclude Include="..\..\ttf\include\ttunpat.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afangles.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afblue.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afcjk.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afcover.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afdummy.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\aferrors.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afglobal.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afhints.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afindic.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\aflatin.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\aflatin2.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afloader.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afmodule.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afpic.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afranges.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afscript.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afstyles.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\aftypes.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afwarp.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\afwrtsys.h" />
+    <ClInclude Include="..\..\ttf\src\autofit\hbshim.h" />
+    <ClInclude Include="..\..\ttf\src\base\basepic.h" />
+    <ClInclude Include="..\..\ttf\src\base\ftbase.h" />
+    <ClInclude Include="..\..\ttf\src\base\md5.h" />
+    <ClInclude Include="..\..\ttf\src\bdf\bdf.h" />
+    <ClInclude Include="..\..\ttf\src\bdf\bdfdrivr.h" />
+    <ClInclude Include="..\..\ttf\src\bdf\bdferror.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftccache.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftccback.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftcerror.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftcglyph.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftcimage.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftcmanag.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftcmru.h" />
+    <ClInclude Include="..\..\ttf\src\cache\ftcsbits.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2arrst.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2blues.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2error.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2fixed.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2font.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2ft.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2glue.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2hints.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2intrp.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2read.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2stack.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cf2types.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffcmap.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffdrivr.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cfferrs.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffgload.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffload.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffobjs.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffparse.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cffpic.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cfftoken.h" />
+    <ClInclude Include="..\..\ttf\src\cff\cfftypes.h" />
+    <ClInclude Include="..\..\ttf\src\cid\ciderrs.h" />
+    <ClInclude Include="..\..\ttf\src\cid\cidgload.h" />
+    <ClInclude Include="..\..\ttf\src\cid\cidload.h" />
+    <ClInclude Include="..\..\ttf\src\cid\cidobjs.h" />
+    <ClInclude Include="..\..\ttf\src\cid\cidparse.h" />
+    <ClInclude Include="..\..\ttf\src\cid\cidriver.h" />
+    <ClInclude Include="..\..\ttf\src\cid\cidtoken.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\infblock.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\infcodes.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\inffixed.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\inftrees.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\infutil.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\zconf.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\zlib.h" />
+    <ClInclude Include="..\..\ttf\src\gzip\zutil.h" />
+    <ClInclude Include="..\..\ttf\src\lzw\ftzopen.h" />
+    <ClInclude Include="..\..\ttf\src\pcf\pcf.h" />
+    <ClInclude Include="..\..\ttf\src\pcf\pcfdrivr.h" />
+    <ClInclude Include="..\..\ttf\src\pcf\pcferror.h" />
+    <ClInclude Include="..\..\ttf\src\pcf\pcfread.h" />
+    <ClInclude Include="..\..\ttf\src\pcf\pcfutil.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrcmap.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrdrivr.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrerror.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrgload.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrload.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrobjs.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrsbit.h" />
+    <ClInclude Include="..\..\ttf\src\pfr\pfrtypes.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\afmparse.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\psauxerr.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\psauxmod.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\psconv.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\psobjs.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\t1cmap.h" />
+    <ClInclude Include="..\..\ttf\src\psaux\t1decode.h" />
+    <ClInclude Include="..\..\ttf\src\pshinter\pshalgo.h" />
+    <ClInclude Include="..\..\ttf\src\pshinter\pshglob.h" />
+    <ClInclude Include="..\..\ttf\src\pshinter\pshmod.h" />
+    <ClInclude Include="..\..\ttf\src\pshinter\pshnterr.h" />
+    <ClInclude Include="..\..\ttf\src\pshinter\pshpic.h" />
+    <ClInclude Include="..\..\ttf\src\pshinter\pshrec.h" />
+    <ClInclude Include="..\..\ttf\src\psnames\psmodule.h" />
+    <ClInclude Include="..\..\ttf\src\psnames\psnamerr.h" />
+    <ClInclude Include="..\..\ttf\src\psnames\pspic.h" />
+    <ClInclude Include="..\..\ttf\src\psnames\pstables.h" />
+    <ClInclude Include="..\..\ttf\src\raster\ftmisc.h" />
+    <ClInclude Include="..\..\ttf\src\raster\ftraster.h" />
+    <ClInclude Include="..\..\ttf\src\raster\ftrend1.h" />
+    <ClInclude Include="..\..\ttf\src\raster\rasterrs.h" />
+    <ClInclude Include="..\..\ttf\src\raster\rastpic.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\pngshim.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\sfdriver.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\sferrors.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\sfntpic.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\sfobjs.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttbdf.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttcmap.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttcmapc.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttkern.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttload.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttmtx.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttpost.h" />
+    <ClInclude Include="..\..\ttf\src\sfnt\ttsbit.h" />
+    <ClInclude Include="..\..\ttf\src\smooth\ftgrays.h" />
+    <ClInclude Include="..\..\ttf\src\smooth\ftsmerrs.h" />
+    <ClInclude Include="..\..\ttf\src\smooth\ftsmooth.h" />
+    <ClInclude Include="..\..\ttf\src\smooth\ftspic.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttdriver.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\tterrors.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttgload.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttgxvar.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttinterp.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttobjs.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttpic.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttpload.h" />
+    <ClInclude Include="..\..\ttf\src\truetype\ttsubpix.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1afm.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1driver.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1errors.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1gload.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1load.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1objs.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1parse.h" />
+    <ClInclude Include="..\..\ttf\src\type1\t1tokens.h" />
+    <ClInclude Include="..\..\ttf\src\type42\t42drivr.h" />
+    <ClInclude Include="..\..\ttf\src\type42\t42error.h" />
+    <ClInclude Include="..\..\ttf\src\type42\t42objs.h" />
+    <ClInclude Include="..\..\ttf\src\type42\t42parse.h" />
+    <ClInclude Include="..\..\ttf\src\type42\t42types.h" />
+    <ClInclude Include="..\..\ttf\src\winfonts\fnterrs.h" />
+    <ClInclude Include="..\..\ttf\src\winfonts\winfnt.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\ttf\Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

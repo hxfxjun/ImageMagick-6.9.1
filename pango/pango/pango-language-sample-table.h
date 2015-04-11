@@ -90,12 +90,6 @@ LANGUAGE(
 	 /* I can eat glass and it doesn't hurt me. */
 	)
 LANGUAGE(
-	 bn	/* Bengali */,
-	 GLASS,
-	 "আমি কাঁচ খেতে পারি, তাতে আমার কোনো ক্ষতি হয় না।"
-	 /* I can eat glass and it doesn't hurt me. */
-	)
-LANGUAGE(
 	 bo	/* Tibetan */,
 	 GLASS,
 	 "ཤེལ་སྒོ་ཟ་ནས་ང་ན་གི་མ་རེད།"
@@ -292,11 +286,6 @@ LANGUAGE(
 	 /* But the fox, with its jump, reached the calm dog */
 	)
 LANGUAGE(
-	 ja	/* Japanese */,
-	 KERMIT,
-	 "いろはにほへと ちりぬるを 色は匂へど 散りぬるを"
-	)
-LANGUAGE(
 	 jam	/* Jamaican Creole English */,
 	 KERMIT,
 	 "Chruu, a kwik di kwik brong fox a jomp huova di liezi daag de, yu no siit?"
@@ -479,12 +468,6 @@ LANGUAGE(
 	 /* Would a citrus live in the bushes of the south? Yes, but only a fake one! */
 	)
 LANGUAGE(
-	 sa	/* Sanskrit */,
-	 GLASS,
-	 "काचं शक्नोम्यत्तुम् । नोपहिनस्ति माम् ॥"
-	 /* I can eat glass and it doesn't hurt me. */
-	)
-LANGUAGE(
 	 scn	/* Sicilian */,
 	 GLASS,
 	 "Puotsu mangiari u vitru, nun mi fa mali."
@@ -546,12 +529,6 @@ LANGUAGE(
 	 /* I can eat glass and it doesn't hurt me. */
 	)
 LANGUAGE(
-	 th	/* Thai */,
-	 WP-SFD,
-	 "เป็นมนุษย์สุดประเสริฐเลิศคุณค่า - กว่าบรรดาฝูงสัตว์เดรัจฉาน - จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร - ไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า - หัดอภัยเหมือนกีฬาอัชฌาสัย - ปฏิบัติประพฤติกฎกำหนดใจ - พูดจาให้จ๊ะ ๆ จ๋า ๆ น่าฟังเอยฯ"
-	 /* Being a man is worthy - Beyond senseless animal - Begin educate thyself - Begone from killing and trouble - Bear not thy grudge, damn and, curse - Bestow forgiving and sporting - Befit with rules - Benign speech speak thou */
-	)
-LANGUAGE(
 	 tl	/* Tagalog */,
 	 GLASS,
 	 "Kaya kong kumain nang bubog at hindi ako masaktan."
@@ -608,30 +585,6 @@ LANGUAGE(
 	 yo	/* Yoruba */,
 	 GLASS,
 	 "Mo lè je̩ dígí, kò ní pa mí lára."
-	 /* I can eat glass and it doesn't hurt me. */
-	)
-LANGUAGE(
-	 zh-cn	/* Chinese Simplified */,
-	 GLASS,
-	 "我能吞下玻璃而不伤身体。"
-	 /* I can eat glass and it doesn't hurt me. */
-	)
-LANGUAGE(
-	 zh-mo	/* Chinese Traditional */,
-	 GLASS,
-	 "我能吞下玻璃而不傷身體。"
-	 /* I can eat glass and it doesn't hurt me. */
-	)
-LANGUAGE(
-	 zh-sg	/* Chinese Simplified */,
-	 GLASS,
-	 "我能吞下玻璃而不伤身体。"
-	 /* I can eat glass and it doesn't hurt me. */
-	)
-LANGUAGE(
-	 zh-tw	/* Chinese Traditional */,
-	 GLASS,
-	 "我能吞下玻璃而不傷身體。"
 	 /* I can eat glass and it doesn't hurt me. */
 	)
 LANGUAGE(

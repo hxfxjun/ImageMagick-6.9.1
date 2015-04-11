@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1'
+top_builddir='/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1'
+
+set -a
+COMPARE="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/compare"
+COMPOSITE="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/composite"
+CONJURE="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/conjure"
+CONVERT="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/convert"
+DISPLAY="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/display"
+IDENTIFY="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/identify"
+MONTAGE="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities/montage" 
+VALIDATE="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/tests/validate"
+DRAWTEST="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/tests/drawtest"
+WANDTEST="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/tests/wandtest"
+LD_LIBRARY_PATH="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/coders"
+MAGICK_CONFIGURE_PATH="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/config:/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/config"
+MAGICK_FILTER_MODULE_PATH="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/filters"
+PATH="/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/utilities:/mnt/hgfs/fanxiaojun/Documents/work_file/mycode/hsb/code/ImageMagick-6.9.1/tests:${PATH}"
+set +a

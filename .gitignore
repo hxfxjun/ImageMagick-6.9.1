@@ -22,3 +22,5 @@ VisualMagick/bin/dcraw.exe
 **/lib/*
 
 *.la
+
+ImageMagick-6.9.1/

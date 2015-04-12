@@ -66,6 +66,7 @@
 
 static int ConvertMain(int argc,char **argv)
 {
+	printf("123123\n");
   ExceptionInfo
     *exception;
 
